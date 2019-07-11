@@ -1,7 +1,8 @@
+import { AntdColorReplacerClient } from 'antd-color-replacer';
 import { Reducer } from 'redux';
 import { message } from 'antd';
+
 import defaultSettings, { DefaultSettings } from '../../config/defaultSettings';
-import themeColorClient from '../components/SettingDrawer/themeColorClient';
 
 export interface SettingModelType {
   namespace: 'settings';
@@ -16,7 +17,7 @@ const updateTheme = (newPrimaryColor?: string) => {
   if (newPrimaryColor) {
     const timeOut = 0;
     const hideMessage = message.loading('正在切换主题！', timeOut);
-    themeColorClient.changeColor(newPrimaryColor).finally(() => hideMessage());
+    AntdColorReplacerClient.compile(newPrimaryColor).finally(() => hideMessage());
   }
 };
 
