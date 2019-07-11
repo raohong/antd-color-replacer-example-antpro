@@ -272,10 +272,14 @@ export default {
       return localName;
     },
   },
+
   manifest: {
     basePath: '/',
   },
+  history: 'hash',
   chainWebpack: webpackPlugin,
+  runtimePublicPath: true,
+  publicPath: './',
   /*
   proxy: {
     '/server/api/': {
