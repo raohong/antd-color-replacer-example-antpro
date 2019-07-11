@@ -11,6 +11,9 @@
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
   </head>
   <body>
+    <script>
+      window.publicPath = location.origin + location.pathname.replace(/\/*$/, '\/');
+    </script>
     <noscript>Sorry, we need js to run correctly!</noscript>
     <div id="root">
       <style>
