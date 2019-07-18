@@ -1,4 +1,4 @@
-import { AntdColorReplacerClient } from 'antd-color-replacer';
+import AntdColorReplacerClient from 'antd-color-replacer/lib/client';
 import { Reducer } from 'redux';
 import { message } from 'antd';
 
